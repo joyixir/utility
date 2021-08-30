@@ -17,7 +17,7 @@ namespace Joyixir.Utils
 
         public static void ScaleUnityTime(float slowdownFactor)
         {
-            if (!_timeScalerInitialized)
+            if(!_timeScalerInitialized)
                 Debug.LogError("Attach timescaler to a unity game object, you may see unexpected behavior if you don't.");
             if (_timeAlreadyScaled)
             {
@@ -32,7 +32,7 @@ namespace Joyixir.Utils
 
         public static void SetUnityTimeScalesToNormal()
         {
-            if (!_timeScalerInitialized)
+            if(!_timeScalerInitialized)
                 Debug.LogError("Attach timescaler to a unity game object, you may see unexpected behavior if you don't.");
             if (!_timeAlreadyScaled) return;
             Time.timeScale = 1;
