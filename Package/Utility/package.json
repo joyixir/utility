@@ -1,6 +1,6 @@
 {
   "name": "com.joyixir.utility",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "displayName": "Utility",
   "description": "Utility package containing Animator, Vector, List etc. extensions to help developers.",
   "documentationUrl": "https://github.com/joyixir/utility",
@@ -17,5 +17,9 @@
     "email": "dev@joyixir.com",
     "url": "https://www.joyixir.com"
   },
-  "type": "tool"
+  "type": "tool",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/joyixir/utility.git"
+  }
 }
