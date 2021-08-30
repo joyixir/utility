@@ -139,8 +139,8 @@ namespace Joyixir.Utils
             var info = animator.GetCurrentAnimatorStateInfo(layer);
 
             return (from clip in animator.runtimeAnimatorController.animationClips
-                where info.IsName(clip.name)
-                select clip.name).FirstOrDefault();
+                    where info.IsName(clip.name)
+                    select clip.name).FirstOrDefault();
         }
 
         public static void ResetAllTriggers(this Animator animator)
