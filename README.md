@@ -37,6 +37,21 @@ Open Window/PackageManager and head to My Registries. Install your desired versi
 You can just clone the repo and do whatever you like with it. Even to make it better.
 
 
+# Use
+### Utils
+Just look around to see if there's any useful extensions for you. There are extensions for AnimationCurve, Vector3, List, Animator, IEnumerable<Color>, Collider Bounds, KeyFrame
+
+There are also some handy functions that you can use(Normalizers, etc).
+### TimeScaler
+Attach TimeScaler to a GameObject
+Do
+```csharp
+TimeScaler.ScaleUnityTime(float: slowDownFactor);
+```
+To undo any scale factor, do:
+```csharp
+TimeScaler.SetUnityTimeScalesToNormal();
+```
 ## License
 
 MIT
