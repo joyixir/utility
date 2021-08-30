@@ -255,5 +255,32 @@ namespace Joyixir.Utils
 
             return thisCurve;
         }
+
+        public static float GetCurrentClipLength(this Animator animator, int layer = 0)
+        {
+            var info = animator.GetCurrentAnimatorStateInfo(layer);
+
+            return (from clip in animator.runtimeAnimatorController.animationClips
+                where info.IsName(clip.name)
+                select clip.length).FirstOrDefault();
+        }
+        
+        public static bool IsInState(Animator animator, string stateName, out AnimatorStateInfo animatorStateInfo)
+        {
+            if (animator != null)
+            {
+                for (int layerIndex = 0; layerIndex < animator.layerCount; layerIndex++)
+                {
+                    AnimatorStateInfo info = animator.GetCurrentAnimatorStateInfo(layerIndex);
+                    if (info.IsName(stateName))
+                    {
+                        animatorStateInfo = info;
+                        return true;
+                    }
+                }
+            }
+            animatorStateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            return false;
+        }
     }
 }
